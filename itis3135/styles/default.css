@@ -1,13 +1,17 @@
-html{
-    background-color: rgb(195, 195, 157);
+*{
+    background-color: #C0C0C0;
+    text-align: center;
+}
+header,footer,h2,p{
     align-content: center;
     margin: auto;
     text-align: center;
+    padding: auto;
 }
 
 img{
     width: 50%;
-    height: 50%;
+    height: 30%;
     align-self: center;
     margin: auto;
     padding: auto;

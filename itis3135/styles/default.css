@@ -1,8 +1,9 @@
 *{
-    background-color: #C0C0C0;
+    background-color: #C4E3CC;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway','Mulish', sans-serif;
     font-weight: 100;
+    color: #333333;
 }
 header{
     display: flex;
@@ -15,6 +16,10 @@ header,footer,h2,p{
     margin: auto;
     text-align: center;
     padding: 20px;
+}
+p::first-line{
+    font-weight: bold;
+    font-size: 30px;
 }
 
 img{

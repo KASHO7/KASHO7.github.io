@@ -1,10 +1,19 @@
 html{
     background-color: rgb(195, 195, 157);
+    align-content: center;
+    margin: auto;
+    text-align: center;
 }
+
 img{
     width: 50%;
-    height: 75%;
+    height: 50%;
     align-self: center;
     margin: auto;
+    padding: auto;
+}
+figcaption{
+    font-style: italic;
+    margin: 10px;
     padding: auto;
 }

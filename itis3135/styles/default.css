@@ -16,7 +16,7 @@ img{
     height: 30%;
     align-self: center;
     margin: auto;
-    padding: auto;
+    padding-top: 10px;
 }
 figcaption{
     font-style: italic;
@@ -26,11 +26,13 @@ figcaption{
 footer{
     margin: auto;
     max-width: 75%;
+    padding: auto;
 }
 ul,li{
     text-align: left;
     margin: 5px;
     max-width: 90%;
+    margin-bottom: 10px;
     
 }
 .bold{

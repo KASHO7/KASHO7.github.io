@@ -29,3 +29,7 @@ ul{
 .bold{
     font-weight: bold;
 }
+.sub{
+    margin: 5px 5px;
+    padding: auto;
+}

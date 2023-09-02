@@ -23,6 +23,10 @@ header,footer,h2,p{
 }
 
 img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 50%;
     height: 30%;
     align-self: center;

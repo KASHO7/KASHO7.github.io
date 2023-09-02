@@ -1,3 +1,10 @@
 html{
     background-color: rgb(195, 195, 157);
 }
+img{
+    width: 50%;
+    height: 75%;
+    align-self: center;
+    margin: auto;
+    padding: auto;
+}

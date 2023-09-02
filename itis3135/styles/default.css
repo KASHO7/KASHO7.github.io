@@ -17,3 +17,15 @@ figcaption{
     margin: 10px;
     padding: auto;
 }
+footer{
+    justify-self: unset;
+    margin: auto;
+    max-width: 75%;
+}
+ul{
+    text-align: left;
+    margin: 15px;
+}
+.bold{
+    font-weight: bold;
+}

@@ -12,14 +12,27 @@
       rel="stylesheet"
     />
     <style>
-        tr:nth-child(even) {
-            background-color: #751919;
-            color: #fff;
-        }
-        tr:nth-child(odd) {
-            background-color: #d1c3c3;
-            color: #fff;
-        }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th {
+        background-color: #96e7b3;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .head {
+        text-align: center;
+      }
+      .complex th,
+      .complex td {
+        text-align: justify;
+        padding: 5px;
+        border: 1px solid #000;
+        display: table-cell;
+      }
     </style>
   </head>
   <body>
@@ -37,46 +50,16 @@
       <h2>Table</h2>
       <h3>My Tabular Data</h3>
       <ul>
+        <li>Eren Yeager, yeager.eren@visionarysuthar.com, 7 years</li>
+        <li>Robert Evans, evans.robert@visionarysuthar.com, 5 years</li>
+        <li>Micheal Smith, smith.micheal@visionarysuthar.com, 3 years</li>
+        <li>Bruce Wayne, wayne.bruce@visionarysuthar.com, 39 years</li>
         <li>
-          <strong>Name:</strong> Eren Yeager,
-          <strong>Email:</strong> yeager.eren@visionarysuthar.com,
-          <strong>Work Experience:</strong> 7 years
+          Christopher Wilson, wilson.christopher@visionarysuthar.com, 12 years
         </li>
-        <li>
-          <strong>Name:</strong> Robert Evans,
-          <strong>Email:</strong> evans.robert@visionarysuthar.com,
-          <strong>Work Experience:</strong> 5 years
-        </li>
-        <li>
-          <strong>Name:</strong> Micheal Smith,
-          <strong>Email:</strong> smith.micheal@visionarysuthar.com,
-          <strong>Work Experience:</strong> 3 years
-        </li>
-        <li>
-          <strong>Name:</strong> Bruce Wayne,
-          <strong>Email:</strong> wayne.bruce@visionarysuthar.com,
-          <strong>Work Experience:</strong> 39 years
-        </li>
-        <li>
-          <strong>Name:</strong> Christopher Wilson,
-          <strong>Email:</strong> wilson.christopher@visionarysuthar.com,
-          <strong>Work Experience:</strong> 12 years
-        </li>
-        <li>
-          <strong>Name:</strong> Olivia Brown,
-          <strong>Email:</strong> brown.olivia@visionarysuthar.com,
-          <strong>Work Experience:</strong> 15 years
-        </li>
-        <li>
-          <strong>Name:</strong> Sarah Johnson,
-          <strong>Email:</strong> johnson.sarah@visionarysuthar.com,
-          <strong>Work Experience:</strong> 10 years
-        </li>
-        <li>
-          <strong>Name:</strong> Matthew Turner,
-          <strong>Email:</strong> turner.matthew@visionarysuthar.com,
-          <strong>Work Experience:</strong> 25 years
-        </li>
+        <li>Olivia Brown, brown.olivia@visionarysuthar.com, 15 years</li>
+        <li>Sarah Johnson, johnson.sarah@visionarysuthar.com, 10 years</li>
+        <li>Matthew Turner, turner.matthew@visionarysuthar.com, 25 years</li>
       </ul>
 
       <h3>Employee Data in Simple Table</h3>
@@ -130,79 +113,79 @@
       </table>
 
       <h3>Employee Data in Complex Table</h3>
-<figure>
-      <table>
-        <tr>
-          <th>Category</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Work Experience</th>
-          <th>Monthly Salary</th>
-        </tr>
-        <tr>
-          <td>Marketing</td>
-          <td>Eren Yeager</td>
-          <td>yeager.eren@visionarysuthar.com</td>
-          <td>7</td>
-          <td>$5,000</td>
-        </tr>
-        <tr>
-          <td>Sales</td>
-          <td>Robert Evans</td>
-          <td>evans.robert@visionarysuthar.com</td>
-          <td>5</td>
-          <td>$4,500</td>
-        </tr>
-        <tr>
-          <td>Sales</td>
-          <td>Micheal Smith</td>
-          <td>smith.micheal@visionarysuthar.com</td>
-          <td>3</td>
-          <td>$4,200</td>
-        </tr>
-        <tr>
-          <td>Management</td>
-          <td>Bruce Wayne</td>
-          <td>wayne.bruce@visionarysuthar.com</td>
-          <td>39</td>
-          <td>$12,000</td>
-        </tr>
-        <tr>
-          <td>IT</td>
+      <figure>
+        <table class="complex">
+          <tr class="head">
+            <th>Category</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Work Experience</th>
+            <th>Monthly Salary</th>
+          </tr>
+          <tr class="even">
+            <td>Marketing</td>
+            <td>Eren Yeager</td>
+            <td>yeager.eren@visionarysuthar.com</td>
+            <td>7</td>
+            <td>$5,000</td>
+          </tr>
+          <tr>
+            <td>Sales</td>
+            <td>Robert Evans</td>
+            <td>evans.robert@visionarysuthar.com</td>
+            <td>5</td>
+            <td>$4,500</td>
+          </tr>
+          <tr>
+            <td>Sales</td>
+            <td>Micheal Smith</td>
+            <td>smith.micheal@visionarysuthar.com</td>
+            <td>3</td>
+            <td>$4,200</td>
+          </tr>
+          <tr>
+            <td>Management</td>
+            <td>Bruce Wayne</td>
+            <td>wayne.bruce@visionarysuthar.com</td>
+            <td>39</td>
+            <td>$12,000</td>
+          </tr>
+          <tr>
+            <td>IT</td>
             <td>Christopher Wilson</td>
             <td>wilson.christopher@visionarysuthar.com</td>
             <td>12</td>
             <td>$6,000</td>
-        </tr>
-        <tr>
-          <td>Customer Support</td>
-          <td>Olivia Brown</td>
-          <td>brown.olivia@visionarysuthar.com</td>
-          <td>15</td>
-          <td>$4,800</td>
-        </tr>
-        <tr>
-          <td>Marketing</td>
-          <td>Sarah Johnson</td>
-          <td>johnson.sarah@visionarysuthar.com</td>
-          <td>10</td>
-          <td>$5,300</td>
-        </tr>
-        <tr>
-          <td>IT</td>
-          <td>Matthew Turner</td>
-          <td>turner.matthew@visionarysuthar.com</td>
-          <td>25</td>
-          <td>$7,200</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
+            <td>Customer Support</td>
+            <td>Olivia Brown</td>
+            <td>brown.olivia@visionarysuthar.com</td>
+            <td>15</td>
+            <td>$4,800</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>Sarah Johnson</td>
+            <td>johnson.sarah@visionarysuthar.com</td>
+            <td>10</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>IT</td>
+            <td>Matthew Turner</td>
+            <td>turner.matthew@visionarysuthar.com</td>
+            <td>25</td>
+            <td>$7,200</td>
+          </tr>
+          <tr>
             <td>Total Years of Service</td>
             <td></td>
             <td></td>
             <td>116</td>
             <td>$49,000</td>
-        </tr>
-      </table>
+          </tr>
+        </table>
       </figure>
       <figcaption>Employee Information</figcaption>
     </main>

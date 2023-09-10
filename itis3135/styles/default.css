@@ -86,13 +86,26 @@ ul,li{
 }
 .reset{
     display: block;
-    padding: auto;
-    margin-top: 10px;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    min-width: 300px;
+    width: 60%;
 }
 .submit{
     display: block;
-    padding: auto;
-    margin-top: 10px;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    min-width: 300px;
+    width: 60%;
+}
+form{
+    width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
 }
 
 

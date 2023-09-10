@@ -108,13 +108,13 @@ form{
   padding-bottom: 2em;
 }
  .complex{
-    box-sizing: border-box;
     width: 100%;
     border-collapse: collapse;
-    border: 0;
+    border: 1.25px groove rgba(0,0,0,0.3);
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .complex th{
     background: #C4E3CC;
@@ -135,7 +135,9 @@ form{
     border-bottom: 1px solid black;
 }
  .complex thead th{
+   
     background-color: #00cf34;
+    
 }
 .complex tr:nth-child(even) td{
     background: #2dcb54;
@@ -143,16 +145,16 @@ form{
 .complex tr:nth-child(odd) td{
     background: #8ec39b;
 }
-tbody{
-    display: table-row-group;
-    justify-self: auto;
-    position: sticky;
+.complex th, .complex td{
+    border: 1.25px groove black;
+}
+.complex tr:nth-last-child(1) td{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+}
+.complex 
 
-}
-section{
-    max-width: 100%;
-    margin: 0 auto;
-    border: 2px solid black;
-}
+
 
 

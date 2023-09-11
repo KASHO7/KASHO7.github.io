@@ -88,12 +88,16 @@ input[type="reset"]{
     height: 30px;
     align-items: center;
     margin: 10px;
+    background-color: grey;
+    color: aliceblue;
 }
 input[type="submit"]{
     width: 100px;
     height: 30px;
     align-items: center;
     margin: 10px;
+    background-color: grey;
+    color: aliceblue;
 }
 
 form{

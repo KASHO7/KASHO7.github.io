@@ -60,46 +60,42 @@ ul,li{
     margin: 5px 5px;
     padding: auto;
 }
-.basic{
-    margin: 5px 5px;
-    padding: auto;
-    font-size: 20px;
-    display: inline;
-    text-align: center;
-}
-.q1{
+
+
+.basic , .q1, .q2{
+    display: flex;
     margin: 5px 5px;
     font-size: 20px;
-    display: inline;
+    border: 1px solid black;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    align-items: baseline;
 }
-.q2{
+.div-q3{
+    display: flex;
     margin: 5px 5px;
     font-size: 20px;
-    display: inline;
-    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    align-items: baseline;
+    justify-content: space-between;
 }
-.q3{
-    margin: 5px 5px;
-    font-size: 20px;
-    display: inline;
-    margin: 10px 10px 10px 10px;
+    
+input[type="reset"]{
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    margin: 10px;
 }
-.reset{
-    display: block;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    min-width: 300px;
-    width: 60%;
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    margin: 10px;
 }
-.submit{
-    display: block;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    min-width: 300px;
-    width: 60%;
-}
+
 form{
     width: 60vw;
   max-width: 500px;

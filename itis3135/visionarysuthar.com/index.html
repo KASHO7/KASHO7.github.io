@@ -24,6 +24,18 @@
       #logo {
         vertical-align: middle;
       }
+      ul {
+        padding-left: 20px;
+        list-style-type: none; /* Remove standard bullet style */
+      }
+      ul li::before {
+        content: "\25A0"; /* Use a different custom bullet character (Unicode) */
+        color: #91c788; /* Color for the custom bullet */
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        font-size: 1.2em; /* Increase font size for better readability */
+      }
     </style>
   </head>
   <body>
@@ -38,6 +50,46 @@
       />
     </h1>
     <h2>VisonarySuthar's Services</h2>
+    <h3>Why Choose Us?</h3>
+    <p>
+      We have a team of highly creative and experienced designers. Our designs
+      are tailored to your unique brand identity. Fast and reliable service with
+      a focus on meeting deadlines. We stay updated with the latest design
+      trends and technologies. Exceptional customer support to address your
+      needs. We offer competitive pricing options to fit your budget. Our
+      portfolio showcases a wide range of successful projects. We take pride in
+      our attention to detail and precision. Client satisfaction is our top
+      priority.
+    </p>
+    <ul>
+      <li>We bring your ideas to life with unique and innovative designs.</li>
+      <li>
+        Our team of experts ensures attention to detail and quality in every
+        project.
+      </li>
+      <li>We prioritize communication and collaboration with our clients.</li>
+      <li>Fast turnaround times without compromising on quality.</li>
+      <li>
+        We stay ahead of industry trends to provide cutting-edge solutions.
+      </li>
+      <li>
+        We are committed to sustainability and eco-friendly design practices.
+      </li>
+      <li>
+        Your success is our success, and we go the extra mile to achieve it.
+      </li>
+      <li>We offer competitive pricing and flexible payment options.</li>
+      <li>
+        Client satisfaction is our top priority, and we strive for excellence.
+      </li>
+      <li>We have a global network of partners to expand your reach.</li>
+    </ul>
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Email: contact@visionarysuthar.com</p>
+      <p>Phone: +1 (123) 456-7890</p>
+      <p>Address: 1234 Design Avenue, Suite 567, City, State 12345</p>
+    </div>
   </body>
   <footer>
     <p>&copy; 2023</p>

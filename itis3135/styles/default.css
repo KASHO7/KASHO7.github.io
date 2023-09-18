@@ -161,7 +161,29 @@ form{
 .simple tr, .simple td{
     border: 1px solid black;
 }
-
+#website-evaluation{
+    display: block;
+    border-bottom:2px solid rgba(0,0,0,0.3);
+    width: 50%;
+}
+.website-one{
+    display: block;
+    width: 85%;
+    height: 30%;
+    align-self: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.website-two{
+    display: block;
+    width: 85%;
+    height: 30%;
+    align-self: center;
+    margin: auto;
+    padding-top: 10px;
+    border-top: 2px solid rgba(0,0,0,0.3);
+}
 
 
 

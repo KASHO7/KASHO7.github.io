@@ -20,6 +20,14 @@ header,footer,h2,p{
     text-align: left;
     width: 80%;
 }
+h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+#p-name{
+    font-size: 20px;
+    font-weight: 600;
+}
 
 img{
     display: flex;

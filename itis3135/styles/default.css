@@ -1,6 +1,5 @@
 *{
     background-color: #C4E3CC;
-    text-align: center;
     font-family: 'Raleway','Mulish', 'sans-serif';
     font-weight: 100;
     color: #333333;
@@ -17,9 +16,9 @@ header,footer,h2,p{
     text-align: center;
     padding: 20px;
 }
-.bigger{
-    font-weight: bold;
-    font-size: 30px;
+#main-p{
+    text-align: left;
+    width: 80%;
 }
 
 img{
@@ -37,6 +36,7 @@ figcaption{
     font-style: italic;
     margin: 10px;
     padding: auto;
+    text-align: center;
 }
 footer{
     display: flex;

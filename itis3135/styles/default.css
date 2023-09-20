@@ -184,6 +184,10 @@ form{
     padding-top: 10px;
     border-top: 2px solid rgba(0,0,0,0.3);
 }
+#contract-id{
+    text-align: left;
+    width: 80%;
+}
 
 
 

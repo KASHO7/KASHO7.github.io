@@ -124,8 +124,7 @@ form{
     
 }
 .complex th{
-    background: #C4E3CC;
-    color: #333333;
+    color: #540B0E;
     font-weight: bold;
     font-size: 18px;
     padding: 10px;
@@ -133,8 +132,7 @@ form{
    border-bottom: 1px solid black;
 }
 .complex td{
-    background: #C4E3CC;
-    color: #333333;
+    color:#540B0E;
     font-weight: normal;
     font-size: 18px;
     padding: 10px;
@@ -143,17 +141,17 @@ form{
 }
  .complex thead th{
    
-    background-color: #00cf34;
+    background-color: #a57731;
     
 }
 .complex tr:nth-child(even) td{
-    background: #2dcb54;
+    background: #cc9139;
 }
 .complex tr:nth-child(odd) td{
-    background: #8ec39b;
+    background: #d4b688;
 }
 .complex th, .complex td{
-    border: 1.25px groove black;
+    border: 1.25px groove rgba(0,0,0,0.5);
 }
 .complex tr:nth-last-child(1) td{
     font-weight: bold;

@@ -1,50 +1,15 @@
 function displayDateTime() {
-  var now = new Date();
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var meridiem = hours >= 12 ? "pm" : "am";
-  hours = hours % 12 || 12;
-  var dayOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ][now.getDay()];
-  var month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ][now.getMonth()];
-  var day = now.getDate();
-  var year = now.getFullYear();
-
-  var formattedTime =
-    hours + ":" + (minutes < 10 ? "0" : "") + minutes + meridiem;
-  var formattedDate =
-    "Today is " +
-    formattedTime +
-    " on " +
-    dayOfWeek +
-    ", " +
-    day +
-    " " +
-    month +
-    ", " +
-    year;
-  document.getElementById("dateTimeDisplay").innerText = formattedDate;
+  const now = new Date();
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const date = now.toLocaleDateString("en-US", options);
+  document.getElementById("dateTimeDisplay").textContent = date;
 }
+displayDateTime();
 
 document
   .getElementById("nameMoodButton")

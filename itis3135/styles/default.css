@@ -211,3 +211,10 @@ form {
   display: block;
   width: 80%;
 }
+
+.byo-from * {
+  display: flex;
+  align-items: flex-end;
+  width: 80%;
+  margin: 200px auto;
+}

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".byo-form");
-  const coursesContainer = document.getElementById("coursesContainer");
+  const coursesContainer = document.getElementById("courseFields");
   const addCourseButton = document.getElementById("addCourseButton");
   const resultContainer = document.getElementById("result");
 
@@ -9,13 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("reset", resetForm);
 
   function addCourseField() {
-    const courseFields = document.getElementById("courseFields");
     const newCourseField = document.createElement("div");
     newCourseField.innerHTML = `
         <input type="text" class="courseInput" required>
         <button type="button" class="deleteButton">Delete</button><br>
-      `;
-    courseFields.appendChild(newCourseField);
+    `;
+    coursesContainer.appendChild(newCourseField);
 
     const deleteButtons = document.querySelectorAll(".deleteButton");
     deleteButtons.forEach((button) => {
@@ -31,40 +30,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = {
       name: document.getElementById("name").value,
       mascot: document.getElementById("mascot").value,
-      image: document.getElementById("image").value, // For file input, use .value to get the filename
+      image: document.getElementById("image").files[0], // Get the image file
       imageCaption: document.getElementById("imageCaption").value,
       funnyThing: document.getElementById("funnyThing").value,
       anythingElse: document.getElementById("anythingElse").value,
       agreeCheckbox: document.getElementById("agreeCheckbox").checked,
     };
 
-    resultContainer.innerHTML = `
-        <h2>Intro Page Preview:</h2>
-        <p><strong>Name:</strong> ${formData.name}</p>
-        <p><strong>Mascot:</strong> ${formData.mascot}</p>
-        <p><strong>Image:</strong> ${formData.image}</p>
-        <p><strong>Image Caption:</strong> ${formData.imageCaption}</p>
-        <p><strong>Funny Thing:</strong> ${formData.funnyThing}</p>
-        <p><strong>Anything Else:</strong> ${formData.anythingElse}</p>
-        <p><strong>Agree Checkbox:</strong> ${
-          formData.agreeCheckbox ? "Checked" : "Unchecked"
-        }</p>
+    const reader = new FileReader();
+    reader.onload = function () {
+      resultContainer.innerHTML = `
+          <h2>Intro Page Preview:</h2>
+          <p><strong>Name:</strong> ${formData.name}</p>
+          <p><strong>Mascot:</strong> ${formData.mascot}</p>
+          <p><strong>Image:</strong> <img src="${
+            reader.result
+          }" alt="Uploaded Image"></p>
+          <p><strong>Image Caption:</strong> ${formData.imageCaption}</p>
+          <p><strong>Funny Thing:</strong> ${formData.funnyThing}</p>
+          <p><strong>Anything Else:</strong> ${formData.anythingElse}</p>
+          <p><strong>Agree Checkbox:</strong> ${
+            formData.agreeCheckbox ? "Checked" : "Unchecked"
+          }</p>
       `;
+      form.style.display = "none";
+      resultContainer.style.display = "block";
+    };
 
-    const courseInputs = document.querySelectorAll(".courseInput");
-    let courses = "";
-    courseInputs.forEach((input) => {
-      courses += input.value + ", ";
-    });
-    courses = courses.slice(0, -2);
-    resultContainer.innerHTML += `<p><strong>Courses Currently Taking:</strong> ${courses}</p>`;
-
-    form.style.display = "none";
-    resultContainer.style.display = "block";
+    if (formData.image) {
+      reader.readAsDataURL(formData.image);
+    } else {
+      resultContainer.innerHTML = "Image not selected!";
+    }
   }
 
   function resetForm() {
     form.style.display = "block";
     resultContainer.style.display = "none";
+    // Clear course fields
+    coursesContainer.innerHTML = "";
   }
 });

@@ -32,8 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
       mascot: document.getElementById("mascot").value,
       image: document.getElementById("image").files[0], // Get the image file
       imageCaption: document.getElementById("imageCaption").value,
+      personalBackground: document.getElementById("personalBackground").value,
+      professionalBackground: document.getElementById("professionalBackground")
+        .value,
+      academicBackground: document.getElementById("academicBackground").value,
+      subjectBackground: document.getElementById("subjectBackground").value,
+      computerPlatform: document.getElementById("computerPlatform").value,
+      coursesTaking: document.getElementById("coursesTaking").value,
       funnyThing: document.getElementById("funnyThing").value,
-      anythingElse: document.getElementById("anythingElse").value,
+      additionalInfo: document.getElementById("additionalInfo").value,
       agreeCheckbox: document.getElementById("agreeCheckbox").checked,
     };
 
@@ -47,8 +54,24 @@ document.addEventListener("DOMContentLoaded", function () {
             reader.result
           }" alt="Uploaded Image"></p>
           <p><strong>Image Caption:</strong> ${formData.imageCaption}</p>
+          <p><strong>Personal Background:</strong> ${
+            formData.personalBackground
+          }</p>
+          <p><strong>Professional Background:</strong> ${
+            formData.professionalBackground
+          }</p>
+          <p><strong>Academic Background:</strong> ${
+            formData.academicBackground
+          }</p>
+          <p><strong>Background in Subject:</strong> ${
+            formData.subjectBackground
+          }</p>
+          <p><strong>Primary Computer Platform:</strong> ${
+            formData.computerPlatform
+          }</p>
+          <p><strong>Courses I’m Taking:</strong> ${formData.coursesTaking}</p>
           <p><strong>Funny Thing:</strong> ${formData.funnyThing}</p>
-          <p><strong>Anything Else:</strong> ${formData.anythingElse}</p>
+          <p><strong>Additional Info:</strong> ${formData.additionalInfo}</p>
           <p><strong>Agree Checkbox:</strong> ${
             formData.agreeCheckbox ? "Checked" : "Unchecked"
           }</p>

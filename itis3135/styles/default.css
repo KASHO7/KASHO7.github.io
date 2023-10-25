@@ -142,7 +142,7 @@ form {
 }
 
 .complex th {
-  color: #540b0e;
+  color: #566573;
   font-weight: bold;
   font-size: 18px;
   padding: 10px;
@@ -151,7 +151,7 @@ form {
 }
 
 .complex td {
-  color: #540b0e;
+  color: #566573;
   font-weight: normal;
   font-size: 18px;
   padding: 10px;
@@ -160,15 +160,15 @@ form {
 }
 
 .complex thead th {
-  background-color: #a57731;
+  background-color: #9ea2a2;
 }
 
 .complex tr:nth-child(even) td {
-  background: #cc9139;
+  background: #d4e7e7;
 }
 
 .complex tr:nth-child(odd) td {
-  background: #d4b688;
+  background: #c1c6c6;
 }
 
 .complex th,

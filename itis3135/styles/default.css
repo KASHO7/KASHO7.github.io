@@ -218,3 +218,32 @@ form {
   width: 80%;
   margin: 200px auto;
 }
+.calculator {
+  width: 300px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.calculator input[type="button"] {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.calculator input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+}

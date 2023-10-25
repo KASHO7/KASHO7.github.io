@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kashyap Suthar's Keen Sawfish | ITIS 3135 | Calculator Try</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Raleway:wght@300;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="icon"
+      href="/itis3135/images/visionarysuthar-high-resolution-logo-color-on-transparent-background.ico"
+      type="image/x-icon" />
+    <div data-include="components/header.html"></div>
+    <script src="script/HTMLInclude.js"></script>
+  </head>
+  <body>
+    <main>
+      <h2>Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="result" readonly>
+                <input type="button" value="1" onclick="addToInput('1')">
+                <input type="button" value="2" onclick="addToInput('2')">
+                <input type="button" value="3" onclick="addToInput('3')">
+                <input type="button" value="+" onclick="addToInput('+')">
+                <br>
+                <input type="button" value="4" onclick="addToInput('4')">
+                <input type="button" value="5" onclick="addToInput('5')">
+                <input type="button" value="6" onclick="addToInput('6')">
+                <input type="button" value="-" onclick="addToInput('-')">
+                <br>
+                <input type="button" value="C" onclick="clearInput()">
+                <input type="button" value="0" onclick="addToInput('0')">
+                <input type="button" value="=" onclick="calculate()">
+            </div>
+            <script>
+                function addToInput(value) {
+                    document.getElementById('result').value += value;
+                }
+                function clearInput() {
+                    document.getElementById('result').value = '';
+                }
+                function calculate() {
+                    var result = eval(document.getElementById('result').value);
+                    document.getElementById('result').value = result;
+                }
+            </script>
+  </body>
+  <div data-include="components/footer.html"></div>
+  <script src="script/HTMLInclude.js"></script>
+</html>

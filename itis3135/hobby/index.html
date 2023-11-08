@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Focal Frame</title>
+    <style>
+      /* styles/default.css */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Verdana, sans-serif;
+        background-color: #a19797;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .menubar {
+        background-color: #444;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      .menubar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menubar li {
+        display: inline;
+        margin: 0 20px;
+      }
+
+      .menubar a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: all 0.5s ease;
+      }
+
+      .menubar a:hover {
+        color: #ffd700;
+      }
+
+      .about-us {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .featured-photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .featured-photos li {
+        margin: 15px;
+        text-align: center;
+        list-style: none;
+      }
+
+      .featured-photos img {
+        max-width: 100%;
+        width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: linear-gradient(to bottom, #b0a8a8, #565252);
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("main section");
+        sections.forEach((section) => {
+          if (section.id !== "home") {
+            section.style.display = "none";
+          }
+        });
+
+        function showSection(sectionId) {
+          sections.forEach((section) => {
+            if (section.id === sectionId) {
+              section.style.display = "block";
+            } else {
+              section.style.display = "none";
+            }
+          });
+        }
+
+        const navLinks = document.querySelectorAll(".menubar a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const sectionId = event.target.getAttribute("href").substring(1);
+            showSection(sectionId);
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Focal Frame</h1>
+      <nav class="menubar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#featured-photos">Featured Photos</a></li>
+          <li><a href="#when">When</a></li>
+          <li><a href="#where">Where</a></li>
+          <li><a href="#how">How</a></li>
+          <li><a href="#why">Why</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main" id="main" class="aui-page-panel">
+      <section id="home" class="featured-photos">
+        <h2 class="featured-photos">Featured Photos</h2>
+        <ul class="featured-photos-list">
+          <li>
+            <figure>
+              <img src="images/EPIC.jpg" alt="EPIC Building" />
+              <figcaption>EPIC Building, UNCC</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="images/Mt.Rushmore.JPG" alt="Mt.Rushmore" />
+              <figcaption>Mt.Rushmore</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="images/fall.jpg" alt="Fall" />
+              <figcaption>Fall</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about" class="about-us">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate photographer dedicated to capturing the beauty of the
+          world. Focal Frame is my platform where photography enthusiasts can
+          showcase their work. Upload your photos, and I, along with my
+          editorial staff, will review them to be featured in our gallery.
+        </p>
+      </section>
+
+      <section id="when" class="time-related-info">
+        <h2>When</h2>
+        <p>
+          Explore the best times to capture stunning photographs. Whether it's
+          golden hour, blue hour, or the magic of night photography, find the
+          perfect moments to click your camera.
+        </p>
+      </section>
+
+      <section id="where" class="location-info">
+        <h2>Where</h2>
+        <p>
+          Discover the most picturesque locations for photography. From natural
+          landscapes to urban wonders, find the ideal spots to enhance your
+          photography skills.
+        </p>
+      </section>
+
+      <section id="how" class="photography-techniques">
+        <h2>How</h2>
+        <p>
+          Learn advanced photography techniques and tricks. From composition to
+          editing, dive into the art and science of capturing breathtaking
+          images.
+        </p>
+      </section>
+
+      <section id="why" class="passion-for-photography">
+        <h2>Why</h2>
+        <p>
+          Uncover the passion behind photography. Explore inspiring stories of
+          photographers, their motivations, and the impact of their work on the
+          world.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="validation-links">
+        <a
+          href="https://validator.w3.org/nu/?doc=https://your-website-url.com"
+          target="_blank"
+          >HTML Valid</a
+        >
+        <a
+          href="https://jigsaw.w3.org/css-validator/validator?uri=https://your-website-url.com&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
+          target="_blank"
+          >CSS Valid</a
+        >
+      </div>
+      <p>&copy; 2023 Focal Frame</p>
+    </footer>
+  </body>
+</html>

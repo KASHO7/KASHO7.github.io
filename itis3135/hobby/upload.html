@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focal Frame | Upload Picture</title>
+    <link rel="stylesheet" href="styles/default.css" />
+    <script src="../hobby/scripts/upload.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Upload</h1>
+      <nav class="menubar">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="upload.html">Upload</a></li>
+        </ul>
+      </nav>
+      <script src="scripts/upload.js"></script>
+    </header>
+
+    <main>
+      <section class="upload">
+        <h2>Upload</h2>
+        <form id="uploadForm">
+          <label for="imageUpload">Choose an image to upload:</label>
+          <input
+            type="file"
+            id="imageUpload"
+            name="image"
+            accept="image/*"
+            required />
+          <button type="submit" class="upload-button">Upload</button>
+        </form>
+        <img
+          id="imagePreview"
+          style="display: none; max-width: 100%; margin-top: 20px" />
+        <div id="uploadMessage" style="display: none; margin-top: 20px"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Focal Frame</p>
+    </footer>
+  </body>
+</html>

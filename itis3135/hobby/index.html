@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Focal Frame</title>
     <style>
-      /* styles/default.css */
       body {
         margin: 0;
         padding: 0;
@@ -21,25 +20,20 @@
         text-align: center;
       }
 
-      .menubar {
-        background-color: #444;
+      nav ul {
+        list-style: none;
+        padding: 0;
         display: flex;
         justify-content: center;
+        background-color: #444;
         padding: 10px 0;
       }
 
-      .menubar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .menubar li {
-        display: inline;
+      nav ul li {
         margin: 0 20px;
       }
 
-      .menubar a {
+      nav ul li a {
         text-decoration: none;
         color: white;
         font-weight: bold;
@@ -47,99 +41,136 @@
         transition: all 0.5s ease;
       }
 
-      .menubar a:hover {
+      nav ul li a:hover {
         color: #ffd700;
       }
 
-      .about-us {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
+      main {
+        padding: 20px;
+      }
+
+      section {
+        display: none;
+      }
+
+      section.show {
+        display: block;
+      }
+
+      .validation-links a {
+        text-decoration: none;
+        color: #fff;
+        margin-right: 20px;
+      }
+
+      .validation-links a:hover {
+        text-decoration: underline;
+      }
+
+      figure {
+        text-align: center;
+      }
+
+      figure img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto; /* Center the images horizontally */
       }
 
       .featured-photos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .featured-photos li {
-        margin: 15px;
-        text-align: center;
         list-style: none;
       }
-
-      .featured-photos img {
-        max-width: 100%;
-        width: 500px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      footer {
-        background-color: linear-gradient(to bottom, #b0a8a8, #565252);
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+      img {
+        display: flex;
+        justify-content: center;
       }
     </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("main section");
-        sections.forEach((section) => {
-          if (section.id !== "home") {
-            section.style.display = "none";
-          }
-        });
-
-        function showSection(sectionId) {
-          sections.forEach((section) => {
-            if (section.id === sectionId) {
-              section.style.display = "block";
-            } else {
-              section.style.display = "none";
-            }
-          });
-        }
-
-        const navLinks = document.querySelectorAll(".menubar a");
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const sectionId = event.target.getAttribute("href").substring(1);
-            showSection(sectionId);
-          });
-        });
-      });
-    </script>
   </head>
 
   <body>
     <header>
       <h1>Focal Frame</h1>
-      <nav class="menubar">
+      <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#featured-photos">Featured Photos</a></li>
-          <li><a href="#when">When</a></li>
-          <li><a href="#where">Where</a></li>
-          <li><a href="#how">How</a></li>
-          <li><a href="#why">Why</a></li>
+          <li>
+            <a class="menu-link" href="#" onclick="showSection('home-page')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="menu-link" href="#" onclick="showSection('about-page')"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="menu-link" href="#" onclick="showSection('gallery-page')"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a class="menu-link" href="#" onclick="showSection('when-page')"
+              >When</a
+            >
+          </li>
+          <li>
+            <a class="menu-link" href="#" onclick="showSection('how-page')"
+              >How</a
+            >
+          </li>
+          <li>
+            <a class="menu-link" href="#" onclick="showSection('why-page')"
+              >Why</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main role="main" id="main" class="aui-page-panel">
-      <section id="home" class="featured-photos">
-        <h2 class="featured-photos">Featured Photos</h2>
-        <ul class="featured-photos-list">
+    <main>
+      <section id="home-page" class="show">
+        <h2>Welcome to Focal Frame!</h2>
+        <p>This is my hobby site, where I share my passion for photography.</p>
+        <p>
+          At Focal Frame, I strive to capture the world's beauty through my
+          lens, freezing moments in time and weaving stories through
+          photographs.
+        </p>
+        <p>
+          Whether it's the breathtaking landscapes, candid portraits, or
+          intricate details, each click of my camera represents my deep
+          appreciation for the world's wonders. Join me on this visual adventure
+          as I showcase my best work, share photography tips, and narrate the
+          stories behind each captivating image.
+        </p>
+        <figure>
+          <img src="images/MeOnMount.jpeg" alt="On a Mountain" />
+          <figcaption>On a Mountain</figcaption>
+        </figure>
+      </section>
+
+      <section id="about-page">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate photographer dedicated to capturing the beauty of the
+          world. Focal Frame is my platform where I can showcase my passion.
+        </p>
+        <p>
+          Focal Frame serves as my canvas, a platform where I can showcase my
+          passion for photography and share my creative vision with the world.
+          It's not just a website; it's my love for the art of capturing
+          moments. This platform has given me the opportunity to express my love
+          for photography.
+        </p>
+        <figure>
+          <img src="images/mountai.JPG" alt="Grand Teton National Park" />
+          <figcaption>Grand Teton National Park</figcaption>
+        </figure>
+      </section>
+
+      <section id="gallery-page">
+        <h2>Featured Photos</h2>
+        <p>These are some photos that I am proud of.</p>
+        <ul class="featured-photos">
           <li>
             <figure>
               <img src="images/EPIC.jpg" alt="EPIC Building" />
@@ -161,67 +192,104 @@
         </ul>
       </section>
 
-      <section id="about" class="about-us">
-        <h2>About Me</h2>
+      <section id="when-page">
+        <h2>My Trip to Yellowstone</h2>
         <p>
-          I'm a passionate photographer dedicated to capturing the beauty of the
-          world. Focal Frame is my platform where photography enthusiasts can
-          showcase their work. Upload your photos, and I, along with my
-          editorial staff, will review them to be featured in our gallery.
+          I had the opportunity to visit Yellowstone National Park during the
+          summer of 2022. It was a breathtaking experience exploring the park's
+          geothermal wonders, observing diverse wildlife, and witnessing the
+          mesmerizing natural beauty, made me fall in love with photography.
         </p>
+        <p>
+          During my trip, I had the chance to marvel at and photograph iconic
+          attractions such as Old Faithful, Grand Prismatic Spring, and the
+          Yellowstone Grand Canyon.
+        </p>
+        <figure>
+          <img src="images/yellowstone1.JPG" alt="Grand Prismatic Spring" />
+          <figcaption>Grand Prismatic Spring, Yellowstone</figcaption>
+        </figure>
       </section>
 
-      <section id="when" class="time-related-info">
-        <h2>When</h2>
+      <section id="how-page">
+        <h2>Mastering the Craft</h2>
         <p>
-          Explore the best times to capture stunning photographs. Whether it's
-          golden hour, blue hour, or the magic of night photography, find the
-          perfect moments to click your camera.
+          Mastering the art of photography is a continuous learning process. I
+          invest time in understanding camera techniques, experimenting with
+          different compositions, and post-processing to enhance the visual
+          impact of my photographs. Through dedication and practice, I strive to
+          refine my skills and create captivating images that resonate with
+          viewers.
         </p>
+        <p>
+          Photography, for me, is a profound experience where every click
+          captures an emotion, a story, or a fleeting moment in time. It's not
+          just about freezing memories; it's about weaving narratives through
+          visuals.
+        </p>
+        <figure>
+          <img src="images/lamp.jpg" alt="Lamp Photo" />
+          <figcaption>Picture of Lamp</figcaption>
+        </figure>
       </section>
 
-      <section id="where" class="location-info">
-        <h2>Where</h2>
+      <section id="why-page">
+        <h2>Why I Love Photography</h2>
         <p>
-          Discover the most picturesque locations for photography. From natural
-          landscapes to urban wonders, find the ideal spots to enhance your
-          photography skills.
+          Photography allows me to appreciate the world's beauty in a unique
+          way. It enables me to capture fleeting moments, emotions, and the
+          essence of life. The thrill of finding the perfect frame, the
+          satisfaction of a well-composed shot, and the joy of sharing my work
+          with others drive my passion for photography. It's not just a hobby;
+          it's a creative outlet that enriches my life and connects me with a
+          community of fellow photography enthusiasts.
         </p>
-      </section>
-
-      <section id="how" class="photography-techniques">
-        <h2>How</h2>
         <p>
-          Learn advanced photography techniques and tricks. From composition to
-          editing, dive into the art and science of capturing breathtaking
-          images.
+          Photography isn't merely about clicking pictures; it's a creative
+          outlet that enriches my life. It enables me to appreciate the
+          intricacies of the world, from the play of light on landscapes to the
+          unspoken emotions etched on people's faces
         </p>
-      </section>
-
-      <section id="why" class="passion-for-photography">
-        <h2>Why</h2>
-        <p>
-          Uncover the passion behind photography. Explore inspiring stories of
-          photographers, their motivations, and the impact of their work on the
-          world.
-        </p>
+        <figure>
+          <img src="images/EPIC.jpg" alt="EPIC Building" />
+          <figcaption>EPIC Building, UNCC</figcaption>
+        </figure>
       </section>
     </main>
 
     <footer>
-      <div class="validation-links">
-        <a
-          href="https://validator.w3.org/nu/?doc=https://your-website-url.com"
-          target="_blank"
-          >HTML Valid</a
-        >
-        <a
-          href="https://jigsaw.w3.org/css-validator/validator?uri=https://your-website-url.com&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
-          target="_blank"
-          >CSS Valid</a
-        >
-      </div>
+      <a
+        id="validator-html"
+        href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fksuthar3%2Fitis3135%2Fhobby%2Findex.html">
+        <img
+          style="border: 0; width: 88px; height: 31px"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"
+          alt="Valid HTML!" />
+      </a>
+
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            style="border: 0; width: 88px; height: 31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+        </a>
+      </p>
+
       <p>&copy; 2023 Focal Frame</p>
     </footer>
+
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll("main section");
+        sections.forEach((section) => {
+          if (section.id === sectionId) {
+            section.classList.add("show");
+          } else {
+            section.classList.remove("show");
+          }
+        });
+      }
+    </script>
   </body>
 </html>

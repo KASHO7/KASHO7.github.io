@@ -298,3 +298,11 @@ form {
   background-color: #2c3e50;
   color: #b5c0ca;
 }
+#sketch-holder {
+  position: relative;
+}
+canvas {
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kashyap Suthar's Keen Sawfish | ITIS 3135 | Home</title>
+    <title>Kashyap Suthar's Keen Sawfish | ITIS 3135 | Arrays</title>
     <link rel="stylesheet" href="styles/default.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,11 +16,22 @@
       type="image/x-icon" />
     <div data-include="components/header.html"></div>
     <script src="script/HTMLInclude.js"></script>
+    <script src="script/arrays.js"></script>
   </head>
   <body>
     <main>
-      <h2>Homepage</h2>
-      <p id="main-p">This is all the content for my ITIS3135 class</p>
+      <h2>Arrays</h2>
+      <select id="employeeSelect"></select>
+      <button id="addSalaryButton">Add Salary</button>
+      <button id="displayResultsButton">Display Results</button>
+      <button id="displaySalaryButton">Display Salary</button>
+      <div id="results"></div>
+      <table id="results_table">
+        <tr>
+          <th>Name</th>
+          <th>Salary</th>
+        </tr>
+      </table>
     </main>
   </body>
   <div data-include="components/footer.html"></div>

@@ -21,36 +21,38 @@
   <body>
     <main>
       <h2>Calculator</h2>
-                   <div class="calculator">
-                    <input type="text" id="result" readonly>
-                    <div class="buttons">
-                      <div class="row">
-                        <button onclick="addToInput('7')">7</button>
-                        <button onclick="addToInput('8')">8</button>
-                        <button onclick="addToInput('9')">9</button>
-                        <button onclick="addToInput('+')">+</button>
-                      </div>
-                      <div class="row">
-                        <button onclick="addToInput('4')">4</button>
-                        <button onclick="addToInput('5')">5</button>
-                        <button onclick="addToInput('6')">6</button>
-                        <button onclick="addToInput('-')">-</button>
-                      </div>
-                      <div class="row">
-                        <button onclick="addToInput('1')">1</button>
-                        <button onclick="addToInput('2')">2</button>
-                        <button onclick="addToInput('3')">3</button>
-                        <button onclick="addToInput('*')">*</button>
-                      </div>
-                      <div class="row">
-                        <button onclick="clearInput()">C</button>
-                        <button onclick="addToInput('0')">0</button>
-                        <button onclick="addToInput('/')">/</button>
-                        <button onclick="calculate()">=</button>
-                      </div>
-                    </div>
-                  </div>
-              </body>
+      <div class="calculator">
+        <input type="text" id="result" readonly />
+        <div class="buttons">
+          <!-- Buttons without inline onclick attributes -->
+          <div class="row">
+            <button id="button7">7</button>
+            <button id="button8">8</button>
+            <button id="button9">9</button>
+            <button id="buttonPlus">+</button>
+          </div>
+          <div class="row">
+            <button id="button4">4</button>
+            <button id="button5">5</button>
+            <button id="button6">6</button>
+            <button id="buttonMinus">-</button>
+          </div>
+          <div class="row">
+            <button id="button1">1</button>
+            <button id="button2">2</button>
+            <button id="button3">3</button>
+            <button id="buttonMultiply">*</button>
+          </div>
+          <div class="row">
+            <button id="buttonClear">C</button>
+            <button id="button0">0</button>
+            <button id="buttonDivide">/</button>
+            <button id="buttonEquals">=</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
   <div data-include="components/footer.html"></div>
   <script src="script/HTMLInclude.js"></script>
 </html>

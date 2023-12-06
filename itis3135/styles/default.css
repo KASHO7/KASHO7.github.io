@@ -309,3 +309,6 @@ canvas {
   margin: auto;
   border: 1px solid black;
 }
+.lightbox-active {
+  border: 2px solid #ffcc00; /* Change to your desired border color */
+}

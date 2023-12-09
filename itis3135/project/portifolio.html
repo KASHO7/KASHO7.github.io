@@ -10,9 +10,9 @@
     <script src="scripts/projectscript.js"></script>
   </head>
   <body>
-    <header>
+    <header role="banner">
       <h1>Portfolio</h1>
-      <nav>
+      <nav role="navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -22,45 +22,60 @@
         </ul>
       </nav>
     </header>
+    <main role="main">
+      <section id="project1">
+        <div id="data-lightbox">
+          <h2>Project: Financial Health Check</h2>
+          <p>
+            Our team conducted a thorough Financial Health Check for a leading
+            financial institution. The audit revealed opportunities for cost
+            savings, streamlined processes, and improved financial reporting
+            accuracy.
+          </p>
+          <p>
+            The outcomes included a 15% reduction in operating costs and
+            enhanced transparency in financial reporting.
+          </p>
+        </div>
+      </section>
 
-    <section id="project1">
-      <div id="data-lightbox">
-        <h2>Project: Financial Health Check</h2>
-        <p>
-          Our team conducted a thorough Financial Health Check for a leading
-          financial institution. The audit revealed opportunities for cost
-          savings, streamlined processes, and improved financial reporting
-          accuracy.
-        </p>
-        <p>
-          The outcomes included a 15% reduction in operating costs and enhanced
-          transparency in financial reporting.
-        </p>
-      </div>
-    </section>
-
-    <section id="project2">
-      <div id="data-lightbox">
-        <h2>Project: Internal Controls Enhancement</h2>
-        <p>
-          We collaborated with a manufacturing company to enhance its internal
-          control systems. Our assessment identified weak points in the existing
-          controls, and we implemented tailored solutions to strengthen the
-          company's risk management framework.
-        </p>
-        <p>
-          The results were a significant reduction in operational risks and
-          improved overall organizational efficiency.
-        </p>
-      </div>
-    </section>
-
-    <footer>
+      <section id="project2">
+        <div id="data-lightbox">
+          <h2>Project: Internal Controls Enhancement</h2>
+          <p>
+            We collaborated with a manufacturing company to enhance its internal
+            control systems. Our assessment identified weak points in the
+            existing controls, and we implemented tailored solutions to
+            strengthen the company's risk management framework.
+          </p>
+          <p>
+            The results were a significant reduction in operational risks and
+            improved overall organizational efficiency.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer role="contentinfo">
       <p>
         Designed by
         <a href="/itis3135/visionarysuthar.com/index.html">VisonarySuthar </a
         >&copy; 2023
       </p>
+      <a id="validator-html" href="https://validator.w3.org/check?uri=referer">
+        <img
+          style="border: 0; width: 88px; height: 31px"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"
+          alt="Valid HTML!" />
+      </a>
+      <a
+        href="https://jigsaw.w3.org/css-validator/check/referer"
+        id="css-validator">
+        <img
+          style="border: 0; width: 88px; height: 31px"
+          src="https://jigsaw.w3.org/css-validator/images/vcss"
+          alt="Valid
+      CSS!" />
+      </a>
     </footer>
   </body>
 </html>

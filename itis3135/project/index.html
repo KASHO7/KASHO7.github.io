@@ -9,7 +9,7 @@
     <script src="scripts/projectscript.js"></script>
   </head>
   <body>
-    <header>
+    <header role="banner">
       <h1>Daniel Mendoza - Auditor</h1>
       <nav>
         <ul>
@@ -21,44 +21,61 @@
         </ul>
       </nav>
     </header>
+    <main role="main">
+      <section>
+        <h2>Featured Services</h2>
 
-    <section>
-      <h2>Featured Services</h2>
+        <div class="service testimonial-carousel">
+          <h3>Financial Audit</h3>
+          <p>
+            Ensure the accuracy of financial records and compliance with
+            regulations.
+          </p>
+          <a href="services.html#financial-audit">Learn More</a>
+        </div>
 
-      <div class="service testimonial-carousel">
-        <h3>Financial Audit</h3>
-        <p>
-          Ensure the accuracy of financial records and compliance with
-          regulations.
-        </p>
-        <a href="services.html#financial-audit">Learn More</a>
-      </div>
+        <div class="service testimonial-carousel">
+          <h3>Internal Controls Review</h3>
+          <p>
+            Assess and enhance the effectiveness of internal control processes.
+          </p>
+          <a href="services.html#internal-controls-review">Learn More</a>
+        </div>
 
-      <div class="service testimonial-carousel">
-        <h3>Internal Controls Review</h3>
-        <p>
-          Assess and enhance the effectiveness of internal control processes.
-        </p>
-        <a href="services.html#internal-controls-review">Learn More</a>
-      </div>
+        <div class="service testimonial-carousel">
+          <h3>Risk Assessment</h3>
+          <p>
+            Identify potential risks and develop strategies to mitigate them.
+          </p>
+          <a href="services.html#risk-assessment">Learn More</a>
+        </div>
+      </section>
 
-      <div class="service testimonial-carousel">
-        <h3>Risk Assessment</h3>
-        <p>Identify potential risks and develop strategies to mitigate them.</p>
-        <a href="services.html#risk-assessment">Learn More</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <a href="contact.html"><button>Contact Daniel</button></a>
-    </section>
-
-    <footer>
+      <section id="contact">
+        <a href="contact.html"><button>Contact Daniel</button></a>
+      </section>
+    </main>
+    <footer role="contentinfo">
       <p>
         Designed by
         <a href="/itis3135/visionarysuthar.com/index.html">VisonarySuthar </a
         >&copy; 2023
       </p>
+      <a id="validator-html" href="https://validator.w3.org/check?uri=referer">
+        <img
+          style="border: 0; width: 88px; height: 31px"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png"
+          alt="Valid HTML!" />
+      </a>
+      <a
+        href="https://jigsaw.w3.org/css-validator/check/referer"
+        id="css-validator">
+        <img
+          style="border: 0; width: 88px; height: 31px"
+          src="https://jigsaw.w3.org/css-validator/images/vcss"
+          alt="Valid
+      CSS!" />
+      </a>
     </footer>
   </body>
 </html>
